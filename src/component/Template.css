@@ -1,0 +1,101 @@
+.templet-section{
+    background-color:rgb(219, 219, 219) ;
+    padding-bottom:40px;
+    padding-top: 7px;
+}
+.templet-top{
+    margin-left: 180px;
+    margin-right: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.templet-right{
+display:flex;
+}
+.gallery-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+.templet-body{
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    margin-left: 20px;
+    margin-top: 15px;
+    align-items: center;
+}
+.card-image{
+    box-sizing:border-box;
+    height: 120px;
+    width:140px;
+    cursor:pointer;
+    border-radius: 2px;
+    border: 0.2px solid #fffdf7;
+}
+.card-image:hover{
+    border: 1px solid #7cdbf5;
+}
+.card-title{
+    font-size: 14px;
+    margin-top: 2px;
+    color:#202125;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .templet-top,
+    .templet-body {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .card {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .card-image {
+        height: 100px;
+        width: 120px;
+    }
+
+    .card-title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .templet-section {
+        padding-bottom: 20px;
+        padding-top: 4px;
+    }
+
+    .templet-top,
+    .templet-body {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .card {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .card-image {
+        height: 80px;
+        width: 90px;
+    }
+
+    .card-title {
+        font-size: 10px;
+    }
+}

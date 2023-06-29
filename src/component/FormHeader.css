@@ -1,0 +1,37 @@
+.form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:5px 15px ;
+    background-color: #fff;
+}
+.form-header-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form-name{
+    border:none ;
+    outline: none;
+    font-family:"GoogleSans",Roberto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight:400;
+    line-height:24px;
+    margin-left:15px;
+    color:#202124;
+    width:120px;
+}
+.form-header-icon{
+color:#202124;
+font-size:20px;
+
+}
+.form-name:focus{
+    border-bottom:1px solid black;
+
+}
+.form-header-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

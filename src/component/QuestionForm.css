@@ -1,0 +1,216 @@
+.question-form{
+    background-color:#F4F4F9 ;
+    height:100%;
+    padding-bottom: 30px;
+}
+.section{
+    margin:auto;
+    width: 50%;
+}
+.question-form-top{
+    background-color:white;
+    border-top:8px solid rgb(103,58,183);
+    border-radius: 8px;
+    padding:30px;
+    text-transform: capitalize;
+}
+.question-form-top-name{
+    box-sizing:'border-box';
+    font-family: 'Google Sans',Roboto,Arial,Sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    line-height: 135%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #F4F4F9;
+    color:black;
+    height: 35px;
+}
+.question-form-top-desc{
+    box-sizing:'border-box';
+    margin-top: 10px;
+    font-family: 'Google Sans',Roboto,Arial,Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #F4F4F9;
+    color:black;
+    height: 20px;
+}
+.question-boxes{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.add-question{
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px 22px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    width: 93%;
+    margin-left: 10px;
+}
+.add-question-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.question{
+    box-sizing:border-box;
+    margin-top: 10px;
+    font-family: 'Google Sans',Roboto,Arial,Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    flex: 1;
+    line-height: 40px;
+    width:40%;
+    border: none;
+    outline:none;
+    color:black;
+    height: 40px;
+    margin-right: 10px;
+    line-height: 10px;
+    padding: 10px;
+}
+.question:focus{
+    border-bottom: 1px solid rgb(103, 58, 183);
+    background-color: #F4F4F9;
+}
+.select{
+    height: 40px;
+    width: 230px;
+    /* border: 0.5px solid; */
+    padding: 5px 15px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1.5px solid #f4f4f9;
+    border-radius: 3px;
+    background: transparent;
+}
+.menuitem{
+    color:rgba(118,118,118,0.3);
+}
+.add-question-body{
+    display: flex;
+    align-items: center;
+
+}
+.text-input{
+    outline: none;
+    border: none;
+    height:40px;
+    width:490px;
+    font-family: Roboto,Arial,Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing:.2px;
+    color:#202124;
+}
+.text-input:focus{
+    border-bottom:1.5px solid rgb(103, 58, 183);
+}
+.addfooter{
+    display: flex;
+    justify-content: space-between;
+}
+.add-question-bottom{
+    margin-top: 12px;
+    border-top: 1px solid rgba(118,118,118,0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.add-question-bottom-left{
+    margin-top: 12px;
+    border-top: 1px solid rgba(118,118,118,0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.add-border{
+    border-left: 6px solid #4285f4;
+}
+.question-edit{
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 1px;
+    border-radius: 3px;
+    height: 180px;
+    width: 35px;
+}
+.edit{
+    color: #5f6368;
+    padding:8px 5px;
+}
+
+@media (max-width: 768px) {
+    .section {
+      width: 80%;
+    }
+  
+    .add-question {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .question,
+    .select,
+    .text-input {
+      width: 100%;
+    }
+    .select{
+        width: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section {
+      width: 100%;
+    }
+  
+    .question-form-top {
+      padding: 20px;
+    }
+  
+    .question,
+    .select,
+    .text-input {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  
+    .add-question {
+      padding: 15px;
+    }
+  
+    .add-question-bottom,
+    .add-question-bottom-left {
+      justify-content: flex-start;
+    }
+  
+    .add-question-body {
+      flex-direction: column;
+    }
+  
+    .question-edit {
+      height: auto;
+      width: 30px;
+      padding: 5px;
+    }
+  }

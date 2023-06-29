@@ -1,0 +1,109 @@
+<div key={i}>
+        <Accordion expanded={ques.open} className={ques.open ? 'add border' : ""}>
+          <AccordionSummary aria-controls='panel1a-content' id='panel1a-header' elevation={1} style={{ width: "100%" }}>
+            {ques.open ? (
+              <div className="saved-question">
+                <Typography style={{ fontSize: "15px", fontWeight: "400", letterSpacing: "1px", lineHeight: '24px', paddingBottom: "8px" }}>
+                  {i + 1}.{questions[i].questionText}
+                </Typography>
+                {ques.option.map((op, j) => (
+                  <div key={j}>
+                    <div style={{ display: "flex" }}>
+                      <FormControlLabel
+                        style={{ marginLeft: "5px", marginBottom: "5px" }}
+                        disabled
+                        control={
+                          <input
+                            type={ques.questionType}
+                            color="primary"
+                            style={{ marginRight: "3px" }}
+                            required={ques.required}
+                          />
+                        }
+                        label={
+                          <Typography style={{
+                            fontFamily: "Roboto, Arial, sans-serif",
+                            fontSize: '13px',
+                            fontWeight: "400",
+                            letterSpacing: "2px",
+                            lineHeight: "20px",
+                            color: "#202124"
+                          }}>
+                            {ques.option[j].optionText}
+                          </Typography>
+                        }
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+          </AccordionSummary>
+          <div className="question-boxes">
+            <AccordionDetails className="add-question">
+                        <div className="add-question-top">
+                            <input type="text" className="question"  placeholder='Question' value={ques.questionText}></input>
+                            <CropOriginalIcon style={{color:"#5f6368"}}/>
+                            <Select className="select"style={{color:"#5f6368",fontSize:"13px"}}>
+                            <MenuItem id="text" value=" Text"><SubjectIcon style={{marginRight:"10px"}}/>Paragraph</MenuItem>
+                            <MenuItem id="checkbox" value=" Checkbox"><CheckBoxIcon style={{marginRight:"10px",color:"#70757a"}} checked/>Checkbox</MenuItem>
+                            <MenuItem id="radio" value=" Radio"><Radio style={{marginRight:"10px" ,color:"#70757a"}} checked/>Multiple Choice </MenuItem>
+                        </Select>
+                        </div>
+                        {ques.option.map((op,j)=>
+                       <div className="add-question-body" key={j}>
+                        {
+                            (ques.questionType!=="text")?
+                            <input type={ques.questionType} style={{marginRight:"10px"}}/>:
+                            <shortTextIcon style={{marginRight:"10px"}}/>
+
+                        }
+                        <div>
+                            <input type="text" className="text-input" placeholder="option" value={ques.option[j].optionText}></input>
+                        </div>
+                        <CropOriginalIcon style={{color:"#5f6368"}}/>
+                        <IconButton aria-label="delete">
+                                <CloseIcon/>
+                        </IconButton>
+                       </div> 
+                        )}
+
+                            {ques.option.length<5 ?(
+                                <div className='add-question-body'>
+
+                                <FormControlLabel disabled control={
+
+                                    (ques.questionType!="text")?
+                                    <input type ={ques.questionType} color ="primary" inputProps={{'aria-label':'secondary checkbox'}}  style={{marginLeft:"10px",marginRight:"10px"}} disabled/>:
+                                        <ShortTextIcon style={{marginRight:"10px"}}/>
+                                } label={
+                                    <div>
+                                      <input type ="text" className="text-input" style={{fontSize:"13px",width:"60px"}}placeholder='Add other'></input>
+                                       <Button size="small " style={{textTransform:"none",color:"#4285f4",fontSize:"13px",fontWeight:"600"}}>Add Option</Button>
+                                       </div> }/>
+                                    </div>
+                            ): ""}
+
+                        <div className="addfooter">
+                            <div className="add-question-bottom-left">
+                                <Button size="small" style={{textTransform:"none",color:"#4285f4",fontSize:"13px",fontWeight:"600"}}>
+                               <OpenInNewIcon style={{border:"2px solid #4285f4",padding:"2px",marginRight:"8px"}}/>Answer Key
+                                </Button>
+                            </div>
+                            <div className="add-question-bottom">
+                                <IconButton aria-label='Copy'>
+                                    <FilterNoneIcon/>
+                                    </IconButton>
+                                    <IconButton aria-label='Delete'>
+                                   <DeleteIcon/>
+                                    </IconButton>
+                                    <span style={{color:"#5f6368",fontSize:"13px"}}>Required</span><Switch name='checkedA' color="primary" check></Switch>
+                                    <IconButton >
+                                    <MoreVertIcon/>
+                                    </IconButton>
+                            </div>
+                        </div>
+            </AccordionDetails>
+          </div>
+        </Accordion>
+      </div>
